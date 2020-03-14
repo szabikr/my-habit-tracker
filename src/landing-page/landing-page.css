@@ -1,8 +1,3 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 #title {
   color: #FFFFFF;
   font-style: normal;
@@ -19,6 +14,7 @@
 
 .user-button {
   background-color: #FFFFFF;
+  color: #5390AA;
   width: 288px;
   height: 60px;
   font-size: 24px;

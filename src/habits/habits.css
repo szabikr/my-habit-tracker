@@ -1,0 +1,30 @@
+.habit-button {
+  background-color: #FFFFFF;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  color: #5390AA;
+  font-size: 24px;
+}
+
+.habit-list {
+  height: 65vh;
+  max-height: 65vh;
+  margin-top: 48px;
+
+  font-size: 24px;
+}
+
+.habit {
+  padding: 8px;
+}
+
+.habit-timestamp {
+  color: #C7C5C5;
+}
+
+.habit-name {
+  color: #FFFFFF;
+
+}
