@@ -3,6 +3,7 @@
   width: 132px;
   height: 132px;
   border-radius: 50%;
+  border: none;
 
   color: #5390AA;
   font-size: 24px;
@@ -28,5 +29,4 @@
 
 .habit-name {
   color: #FFFFFF;
-
 }
