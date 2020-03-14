@@ -9,9 +9,11 @@
 }
 
 .habit-list {
-  height: 65vh;
-  max-height: 65vh;
+  height: 60vh;
+  max-height: 60vh;
   margin-top: 48px;
+  margin-bottom: 48px;
+  overflow-y: scroll;
 
   font-size: 24px;
 }

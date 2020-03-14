@@ -2,7 +2,6 @@ import React from 'react';
 import './landing-page.css';
 
 function LandingPage() {
-
   return (
     <div>
       <div className="wrapper">
