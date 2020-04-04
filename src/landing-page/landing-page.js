@@ -1,7 +1,26 @@
 import React from 'react';
 import './landing-page.css';
 
-function LandingPage() {
+function LandingPage({ setUser }) {
+
+  const onOlitronixClick = () => {
+    setUser({
+      name: 'olitronix',
+      habit: {
+        name: 'Water'
+      }
+    });
+  }
+
+  const onSzabikrClick = () => {
+    setUser({
+      name: 'szabikr',
+      habit: {
+        name: 'Smoking',
+      }
+    });
+  }
+
   return (
     <div>
       <div className="wrapper">
@@ -10,11 +29,11 @@ function LandingPage() {
 
       <div className="user-buttons">
         <div className="wrapper">
-          <button className="user-button">olitronix</button>
+          <button className="user-button" onClick={onOlitronixClick}>olitronix</button>
         </div>
 
         <div className="wrapper">
-          <button className="user-button">szabikr</button>
+          <button className="user-button" onClick={onSzabikrClick}>szabikr</button>
         </div>
       </div>
     </div>
