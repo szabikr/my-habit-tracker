@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import './app.css';
 
-import LandingPage from './landing-page/landing-page';
-import Habits from './habits/habits';
+import LandingPage from '../landing-page/landing-page';
+import Habits from '../habits/habits';
 
 function App() {
 

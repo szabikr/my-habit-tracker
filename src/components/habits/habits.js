@@ -13,17 +13,22 @@ function Habits({ user }) {
   useEffect(() => {
 
     async function fetchData() {
-      const response = await axios.get(
-        `${apiAddress}/performed-habits/${user.name}`,
-      );
-
-      if (response.data.body === '') {
-        return;
+      try {
+        const response = await axios.get(
+          `${apiAddress}/performed-habits/${user.name}`,
+        );
+  
+        if (response.data.body === '') {
+          return;
+        }
+  
+        const performedHabits = JSON.parse(response.data.body);
+  
+        setPerformedHabits(performedHabits);
+      } catch (err) {
+        console.log('Error when getting Performed Habits:', err);
       }
-
-      const performedHabits = JSON.parse(response.data.body);
-
-      setPerformedHabits(performedHabits);
+      
     }
 
     fetchData();
@@ -43,12 +48,14 @@ function Habits({ user }) {
     }
 
     async function sendData() {
-      const response = await axios.post(
-        `${apiAddress}/performed-habits`,
-        requestData
-      );
-
-      // TODO: Handle error
+      try {
+        await axios.post(
+          `${apiAddress}/performed-habits`,
+          requestData
+        );
+      } catch (err) {
+        console.log('Error when send Performed Habit:', err);
+      }
     }
 
     sendData();

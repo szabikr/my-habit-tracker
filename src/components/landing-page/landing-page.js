@@ -1,24 +1,15 @@
 import React from 'react';
 import './landing-page.css';
+import users from '../../config/users';
 
 function LandingPage({ setUser }) {
 
   const onOlitronixClick = () => {
-    setUser({
-      name: 'olitronix',
-      habit: {
-        name: 'Water'
-      }
-    });
+    setUser(users.olitronix);
   }
 
   const onSzabikrClick = () => {
-    setUser({
-      name: 'szabikr',
-      habit: {
-        name: 'Smoking',
-      }
-    });
+    setUser(users.szabikr);
   }
 
   return (
