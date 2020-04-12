@@ -1,6 +1,17 @@
 
 .habit {
-  padding: 8px;
+  padding: 12px;
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.habit-header:first-child {
+  margin-top: 0;
 }
 
 .habit-timestamp {
@@ -8,5 +19,11 @@
 }
 
 .habit-name {
+  color: #FFFFFF;
+  display: inline;
+}
+
+.habit-content {
+  font-size: 18px;
   color: #FFFFFF;
 }

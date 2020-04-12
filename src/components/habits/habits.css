@@ -10,7 +10,7 @@
 }
 
 .habit-list {
-  height: 60vh;
+  height: 50vh;
   max-height: 60vh;
   margin-top: 48px;
   margin-bottom: 48px;
@@ -18,3 +18,15 @@
 
   font-size: 24px;
 }
+
+.whats-on-your-mind {
+  width: 264px;
+  height: 36px;
+  font-size: 24px;
+  color: #5390AA;
+  margin-bottom: 12px;
+}
+
+::placeholder {
+  color: #C7C5C5;
+};

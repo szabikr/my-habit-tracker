@@ -2,16 +2,16 @@
 const szabikr = {
   name: 'szabikr',
   habit: {
-    name: 'Tea',
-    description: 'Drinking Tea'
+    shortname: 'Tea',
+    name: 'Drinking Tea'
   }
 }
 
 const olitronix = {
   name: 'olitronix',
   habit: {
-    name: 'Water',
-    description: 'Drinking Water'
+    shortname: 'Water',
+    name: 'Drinking Water'
   }
 }
 

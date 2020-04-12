@@ -3,12 +3,14 @@ import axios from 'axios';
 import './habits.css';
 
 import Habit from '../habit/habit';
+import config from '../../config/config';
 
 const apiAddress = 'https://32higkx30e.execute-api.eu-west-1.amazonaws.com/dev';
 
 function Habits({ user }) {
 
   const [performedHabits, setPerformedHabits] = useState([]);
+  const [habitContent, setHabitContent] = useState('');
 
   useEffect(() => {
 
@@ -43,7 +45,9 @@ function Habits({ user }) {
       },
       performedHabit: {
         name: user.habit.name,
-        timestamp: Date.now()
+        description: user.habit.description,
+        timestamp: Date.now(),
+        content: habitContent,
       }
     }
 
@@ -65,7 +69,16 @@ function Habits({ user }) {
       requestData.performedHabit
     ]);
 
+    setHabitContent('');
+
   };
+
+  const onHabitContentChange = (event) => {
+    if (event.target.value.length > config.habitContentLength) {
+      return;
+    }
+    setHabitContent(event.target.value);
+  }
 
   return (
     <div>
@@ -73,12 +86,19 @@ function Habits({ user }) {
         {performedHabits.map((habit, index) => (
           <Habit
             key={index}
-            timestamp={habit.timestamp}
-            name={habit.name} />
+            habit={habit} />
         ))}
       </div>
       <div className="wrapper">
-        <button className="habit-button" onClick={performHabit}>{user.habit.name}</button>
+        <input
+          className="whats-on-your-mind"
+          type="text"
+          placeholder="What's on your mind?"
+          value={habitContent}
+          onChange={onHabitContentChange} />
+      </div>
+      <div className="wrapper">
+        <button className="habit-button" onClick={performHabit}>{user.habit.shortname}</button>
       </div>
     </div>
   )
