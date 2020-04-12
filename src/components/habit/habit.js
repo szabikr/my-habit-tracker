@@ -7,7 +7,7 @@ function Habit({ habit }) {
     <div className="habit">
       <div className="habit-header">
         <div className="habit-timestamp">
-          {moment(parseInt(habit.timestamp)).format('ddd, h a')}
+          {moment(parseInt(habit.timestamp)).format('ddd, h:s a')}
         </div>
         <div className="habit-name">
           {habit.name}
